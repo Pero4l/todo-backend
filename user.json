@@ -1,21 +1,20 @@
-[
+{
+  "details": [
     {
-        "details": {
-            "id": 1,
-            "name": "Promise",
-            "email": "promise@gmail.com",
-            "password": "$2b$13$0nsvg.i7X8luJbwfjGnihexIZc2IILEPxu.SQK249Xwrlpnn2K/vC",
-            "date": "9/25/2025, 12:07:37 AM"
-            },
-
-
-            "todo": {
-                "id": 1,
-                "title": "Dance",
-                "status": false,
-                "date": "9/25/2025, 12:07:37 AM"
-            }
-
-
+      "id": 1,
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "$2b$13$JfuZnB7mM8vBIgLTKUxhvenEdOz877gPqQTp67yz88oIDZBqDkCDq",
+      "date": "2025-09-25"
     }
-]
+  ],
+  
+  "todo": [
+    {
+      "id": 1,
+      "title": "Dance",
+      "status": false,
+      "date": "9/25/2025, 12:07:37 AM"
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 const exprees = require("express");
 const app = exprees();
 const PORT = 8000;
+
+const authRouter = require('./routers/auth.route')
+
 app.use(exprees.json())
 
 app.get('/', (req, res) => {
@@ -9,6 +12,8 @@ app.get('/', (req, res) => {
         "message": "Welcome to my Todo project"
     })
 })
+
+app.use('/auth', authRouter)
 
 
 app.listen(PORT, () =>{

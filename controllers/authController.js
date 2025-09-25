@@ -27,7 +27,7 @@ async function register(req, res){
         return res.status(400).json({message: "Name must be at least 3 characters"});
     }
 
-    if(users.find((u)=> u.email === email)){
+    if(users['details'].find((u)=> u.email === email)){
          return res.status(400).json({
             "success": false,
             "message": "User already exists"
@@ -35,12 +35,12 @@ async function register(req, res){
     }
 
     const hashedPassword = await bcrypt.hash(password, 13)
-    const id = users.length + 1;
-    const date = new Date();
+    const id = users['details'].length + 1;
+    const date = new Date().toLocaleDateString('en-CA');
 
     const newUser = {id, name, email, password: hashedPassword, date}
 
-    users.push(newUser)
+    users['details'].push(newUser)
     writeDb(users)
 
     res.status(201).json({ 
@@ -53,4 +53,9 @@ async function register(req, res){
 
 
 
+}
+
+
+module.exports = {
+    register
 }
