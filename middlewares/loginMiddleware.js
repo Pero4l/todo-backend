@@ -22,6 +22,7 @@ async function loginMiddleware(req, res, next) {
         });
     }
 
+
     req.user = passMatch
     req.data = userExist
     next()

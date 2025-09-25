@@ -6,16 +6,16 @@
       "email": "test@gmail.com",
       "password": "$2b$13$JfuZnB7mM8vBIgLTKUxhvenEdOz877gPqQTp67yz88oIDZBqDkCDq",
       "date": "2025-09-25"
+    },
+    {
+      "id": 2,
+      "name": "ptb",
+      "email": "ptb@gmail.com",
+      "password": "$2b$13$RKGv2f24Uhcw4iqCalDrdulKpbUc7DIKZ1JoCwU/olDdfN.7DwNPq",
+      "date": "2025-09-25"
     }
   ],
   "todo": [
-    {
-      "id": 1,
-      "title": "Dance",
-      "description": "I want to dance",
-      "status": false,
-      "date": "9/25/2025, 12:07:37 AM"
-    },
     {
       "id": 2,
       "title": "Coding",
