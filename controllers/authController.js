@@ -1,5 +1,8 @@
 const {readDb, writeDb} = require('../utils/dpOperation')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+
+require('dotenv').config()
 
 async function register(req, res){
      const {name, email, password} = req.body;
@@ -49,13 +52,31 @@ async function register(req, res){
         "data": newUser
     });
 
-    
-
-
 
 }
 
 
+
+
+async function login(req, res) {
+
+    const token = jwt.sign(req.data, process.env.JWT_SECRET, {expiresIn: '1h'})
+
+    if(req.user){
+        return res.status(200).json({
+        "success": true,
+        "message": "Login Successfully",
+        "token": token
+
+    })
+    }
+    
+}
+
+
+
+
 module.exports = {
-    register
+    register,
+    login
 }

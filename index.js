@@ -1,10 +1,11 @@
-const exprees = require("express");
-const app = exprees();
-const PORT = 8000;
+const express = require("express");
+const app = express();
+
+require('dotenv').config()
 
 const authRouter = require('./routers/auth.route')
 
-app.use(exprees.json())
+app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authRouter)
 
-
+const PORT = 8000 ;
 app.listen(PORT, () =>{
     console.log(`server running on PORT ${PORT}`);
     
