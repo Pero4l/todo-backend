@@ -4,6 +4,7 @@ const app = express();
 require('dotenv').config()
 
 const authRouter = require('./routers/auth.route')
+const todoRouter = require('./routers/todo.route')
 
 app.use(express.json())
 
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/auth', authRouter)
+app.use('/todo', todoRouter)
 
 const PORT = 8000 ;
 app.listen(PORT, () =>{
