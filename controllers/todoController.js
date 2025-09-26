@@ -2,8 +2,7 @@ const {readDb, writeDb} = require('../utils/dpOperation')
 
 
 async function addTodo(req, res){
-    const{title, description} = req.body
-
+    const {title, description} = req.body
     const users = readDb()
 
     if(!title || !description){
@@ -13,35 +12,34 @@ async function addTodo(req, res){
         })
     }
 
-
-    if(users['todo'].find((t)=> t.title === title && t.description === description)){
+    if(users['todo'].find((t)=> t.title === title && t.description === description && t.userId === req.user.id)){
         return res.status(400).json({
             "success": false,
-            "message": "Todo already exsit"
+            "message": "Todo already exists"
         })
     }
 
     const id = users['todo'].length + 1;
     const date = new Date().toLocaleDateString('en-CA');
     const status = false;
+    const userId = req.user.id; 
 
     const newTodo = {
         id,
         title,
         description,
         status,
-        date
+        date,
+        userId 
     }
 
     users['todo'].push(newTodo)
-
     writeDb(users)
     res.status(200).json({
-            "success": true,
-            "message": "Todo added successfully",
-            "data": newTodo
-        })
-
+        "success": true,
+        "message": "Todo added successfully",
+        "data": newTodo
+    })
 }
 
 
@@ -160,7 +158,24 @@ async function markDone(req, res) {
 
 async function getAuserTodo(req, res) {
     const {id} = req.body
+
+    const users = readDb()
+
+    const todo = users['todo'].find((userId)=> userId.id === id)
+
+    if(todo){
+        return res.status(200).json({
+        "succss": true,
+        "message": "Gotten a user todo successfully",
+        "data": todo
+      })
+    } else{
+        return res.status(400).json({
+        "succss": false,
+        "message": "Unable to get a user todo"
+      })
+    }
     
 }
 
-module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo, markDone}
+module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo, markDone, getAuserTodo}
