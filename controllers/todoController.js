@@ -138,8 +138,21 @@ async function markDone(req, res) {
       })
     }
 
+        if(status === true){
+            todo.status === status
+            res.status(200).json({
+            "success": true,
+            "message": "Todo marked as done successfully"
+        })
+        } else {
+            todo.status === status
+            res.status(200).json({
+            "success": true,
+            "message": "Todo marked as undone successfully"
+        })
+        }
 
-    todo.status === status
+        
 }
 
 module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo}
