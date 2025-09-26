@@ -139,7 +139,7 @@ async function markDone(req, res) {
     }
 
 
-    // todo.status === status
+    todo.status === status
 }
 
 module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo}
