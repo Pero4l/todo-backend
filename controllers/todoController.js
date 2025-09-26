@@ -161,7 +161,7 @@ async function getAuserTodo(req, res) {
 
     const users = readDb()
 
-    const todo = users['todo'].find((userId)=> userId.id === id)
+    const todo = users['todo'].find((u)=> u.userId === id)
 
     if(todo){
         return res.status(200).json({
