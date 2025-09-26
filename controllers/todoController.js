@@ -100,6 +100,29 @@ async function pagination(req, res) {
 }
 
 
+async function getPastTodo(req, res) {
+
+  let users = readDb()
+
+  const currentDate = new Date().toLocaleDateString('en-CA');
+
+  const past = users['todo'].filter((d) => d.date < currentDate)
+
+  if(!past){
+    return res.status(404).json({
+    "success": true,
+    "message": "Can't find past todo",
+    "data": past
+  })
+  }
+
+  res.status(200).json({
+    "success": true,
+    "message": "Gotten past todo successfully",
+    "data": past
+  })
+}
+
 
 
 module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo}
