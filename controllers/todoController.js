@@ -157,4 +157,10 @@ async function markDone(req, res) {
         
 }
 
+
+async function getAuserTodo(req, res) {
+    const {id} = req.body
+    
+}
+
 module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo, markDone}
