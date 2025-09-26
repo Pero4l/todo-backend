@@ -124,5 +124,22 @@ async function getPastTodo(req, res) {
 }
 
 
+async function markDone(req, res) {
+    const {id, status} = req.body
+
+    const users = readDb()
+
+    const todo = users['todo'].find((t)=> t.id === id)
+
+    if(!todo){
+      return res.status(404).json({
+        "succss": false,
+        "message": "Todo do not exsit"
+      })
+    }
+
+
+    // todo.status === status
+}
 
 module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo}
