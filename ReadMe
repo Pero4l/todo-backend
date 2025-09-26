@@ -1,0 +1,15 @@
+Create an API for a todo list with the following features:
+1. Register --
+2. Login --
+3. Add todos --
+4. Get a user todos 
+5. Delete my todo --
+6. Get all my todos --
+7. Mark todo as done
+8. Unmark todo
+9. Get all todos past date --
+10. Search for todo
+11. Filter todo
+12. Add pagination --
+
+Ensure all endpoints are secured.

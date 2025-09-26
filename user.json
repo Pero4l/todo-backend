@@ -5,37 +5,83 @@
       "name": "test",
       "email": "test@gmail.com",
       "password": "$2b$13$JfuZnB7mM8vBIgLTKUxhvenEdOz877gPqQTp67yz88oIDZBqDkCDq",
-      "date": "2025-09-25"
+      "date": "2025-09-23"
     },
     {
       "id": 2,
       "name": "ptb",
       "email": "ptb@gmail.com",
       "password": "$2b$13$RKGv2f24Uhcw4iqCalDrdulKpbUc7DIKZ1JoCwU/olDdfN.7DwNPq",
-      "date": "2025-09-25"
-    }
-  ],
-  "todo": [
-    {
-      "id": 2,
-      "title": "Coding",
-      "description": "I want to code",
-      "status": false,
-      "date": "2025-09-25"
+      "date": "2025-09-22"
     },
     {
       "id": 3,
+      "name": "King",
+      "email": "king@gmail.com",
+      "password": "$2b$13$L4IfSiWMyEcnMbwJc0ZxOezjqxwewL8iGY7KHN/szFbT/iQMXAQY2",
+      "date": "2025-09-24"
+    }
+  ],
+  "todo": [
+      {
+      "id": 1,
+      "title": "Play",
+      "description": "I want to Play",
+      "status": false,
+      "date": "2025-09-20"
+    },
+    {
+      "id": 2,
       "title": "Pray",
       "description": "I want to Pray",
       "status": false,
-      "date": "2025-09-25"
+      "date": "2025-09-22"
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Game",
       "description": "I want to Play Game",
       "status": false,
+      "date": "2025-09-23"
+    },
+    {
+      "id": 4,
+      "title": "Sleep",
+      "description": "I want to Sleep",
+      "status": false,
+      "date": "2025-09-12"
+    },
+      {
+      "id": 5,
+      "title": "Dance",
+      "description": "I want to dance",
+      "status": false,
+      "date": "2025-09-17"
+    },
+      {
+      "id": 6,
+      "title": "Party",
+      "description": "I want to Party",
+      "status": false,
+      "date": "2025-09-25"
+    },
+      {
+      "id": 7,
+      "title": "Run",
+      "description": "I want to Run",
+      "status": false,
+      "date": "2025-09-25"
+    },
+      {
+      "id": 8,
+      "title": "Fight",
+      "description": "I want to Fight",
+      "status": false,
       "date": "2025-09-25"
     }
+
   ]
+
+
+
 }
