@@ -139,16 +139,18 @@ async function markDone(req, res) {
     }
 
         if(status === true){
-            todo.status === status
+            todo.status = status
             res.status(200).json({
             "success": true,
-            "message": "Todo marked as done successfully"
+            "message": "Todo marked as done successfully",
+            "data": todo
         })
         } else {
-            todo.status === status
+            todo.status = status
             res.status(200).json({
             "success": true,
-            "message": "Todo marked as undone successfully"
+            "message": "Todo marked as undone successfully",
+            "data": todo
         })
         }
 
