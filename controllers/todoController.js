@@ -155,4 +155,4 @@ async function markDone(req, res) {
         
 }
 
-module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo}
+module.exports = {addTodo, deleteTodo, getAllTodos, pagination, getPastTodo, markDone}
