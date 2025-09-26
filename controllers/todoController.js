@@ -87,6 +87,18 @@ async function getAllTodos(req, res) {
 }
 
 
+async function pagination(req, res) {
+     const users = readDb()
+
+    const Data = users['todo'].slice(0, 5)
+
+    res.status(200).json({
+        "success": true,
+            "message": "Pagination successfully",
+            "data": Data
+    })
+}
+
 
 
 
